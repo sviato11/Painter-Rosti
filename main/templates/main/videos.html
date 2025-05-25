@@ -1,0 +1,29 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+Videos from our work
+{% endblock %}
+
+{% block content %}
+<section id="videos" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-4">Our Work in Action</h2>
+        <div class="row">
+            {% for video in videos %}
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card shadow">
+                    <video controls class="w-100 rounded-top" preload="metadata">
+                        <source src="{{ video.video.url }}" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="card-body">
+                        <h5 class="card-title">{{ video.title }}</h5>
+                        <p class="card-text">{{ video.description }}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}
