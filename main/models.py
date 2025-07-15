@@ -8,3 +8,11 @@ class WorkVideo(models.Model):
 
     def __str__(self):
         return f"{self.title}"
+    
+class WorkPhoto(models.Model):
+    title = models.CharField(max_length=100)
+    image = models.ImageField(upload_to='work_photos/')    
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"{self.title}" or f"Photo {self.id}"
