@@ -309,7 +309,7 @@ ul {
     border-radius: 20px;
 }
 .hero-section {
-    background-image: url("/static/main/img/green-background.avif");
+    background-image: url("/static/main/img/painterRostiBackground.png");
     height: 100vh;
     background-size: cover;
     background-position: center;
@@ -417,4 +417,14 @@ ul {
     .scroll-down-top-left i {
         font-size: 1rem;
     }
+}
+
+.reviews-section h2 {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.reviews-section .card-footer {
+    background-color: #f8f9fa;
+    font-weight: 500;
 }

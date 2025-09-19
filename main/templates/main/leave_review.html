@@ -1,0 +1,32 @@
+{% extends 'main/base.html' %}
+{% block title %}Painter Rosti | Leave review{% endblock %}
+
+{% block content %}
+<section class="container py-5">
+  <div class="text-center mb-4">
+    <h2>Leave review</h2>
+    <p class="lead">Your review helps us improve.</p>
+  </div>
+
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <form method="post" class="p-4 border rounded bg-white">
+        {% csrf_token %}
+        <div class="mb-3">
+          {{ form.name.label_tag }} {{ form.name }}
+        </div>
+        <div class="mb-3">
+          {{ form.email.label_tag }} {{ form.email }}
+        </div>
+        <div class="mb-3">
+          {{ form.text.label_tag }} {{ form.text }}
+        </div>
+        <div class="mb-3">
+          {{ form.rating.label_tag }} {{ form.rating }}
+        </div>
+        <button type="submit" class="btn btn-primary">Send</button>
+      </form>
+    </div>
+  </div>
+</section>
+{% endblock %}

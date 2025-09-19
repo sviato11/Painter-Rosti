@@ -16,3 +16,14 @@ class WorkPhoto(models.Model):
 
     def __str__(self):
         return f"{self.title}" or f"Photo {self.id}"
+    
+class Review(models.Model):
+    name = models.CharField(max_length=150)
+    email = models.EmailField()
+    text = models.TextField()
+    rating = models.PositiveSmallIntegerField(default=5)
+    created_at = models.DateTimeField(auto_now_add=True)
+    approved = models.BooleanField(default=False)
+
+    def __str__(self):
+        return f"{self.name} ({self.rating}⭐)"

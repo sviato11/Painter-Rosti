@@ -89,5 +89,52 @@
     </div>
   </div>
 </section>
+
+
+<!--Зробити слайдер з відгуками, і перенести написання відгуку на іншу сторінку-->
+
+<section class="reviews-slider-section py-5 bg-light" id="reviews">
+  <div class="container">
+    <div class="text-center mb-4">
+      <h2>Reviews from our clients</h2>
+      <p class="lead">What they say about us</p>
+    </div>
+
+    <div id="reviewsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+      <div class="carousel-inner">
+        {% for review in reviews %}
+        <div class="carousel-item {% if forloop.first %}active{% endif %}">
+          <div class="row justify-content-center">
+            <div class="col-md-8">
+              <div class="card shadow-sm">
+                <div class="card-body text-center">
+                  <h5 class="card-title">{{ review.name }}</h5>
+                  <p class="card-text">{{ review.text }}</p>
+                  <div>{{ review.rating }} ⭐</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#reviewsCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <div class="text-center mt-3">
+      <a href="{% url 'leave_review' %}" class="btn btn-primary">Leave your review</a>
+    </div>
+  </div>
+</section>
+
+
     
 {% endblock %}
