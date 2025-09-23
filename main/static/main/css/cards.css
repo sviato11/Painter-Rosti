@@ -1,0 +1,26 @@
+.service-card:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+}
+
+.service-card img {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center; 
+    border-bottom: 3px solid #ddd;
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+.reviews-section h2 {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.reviews-section .card-footer {
+    background-color: #f8f9fa;
+    font-weight: 500;
+}

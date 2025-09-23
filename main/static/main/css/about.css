@@ -1,0 +1,26 @@
+.about-section {
+    background-color: #f8f9fa;
+}
+
+.about-section h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.about-section p.lead {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+}
+
+.about-section .carousel {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-section .carousel-inner img {
+    height: 700px;
+    object-fit: cover;
+    border-radius: 20px;
+}
